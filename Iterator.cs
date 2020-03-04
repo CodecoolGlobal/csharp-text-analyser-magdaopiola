@@ -5,7 +5,7 @@ namespace csharp_text_analyser_magdaopiola
     public abstract class Iterator
     {   
         protected string[] textArray;
-        int pos;
+        protected int pos;
         protected FileContent fileContent;
 
         public Iterator(FileContent fileContent)

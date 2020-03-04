@@ -4,18 +4,18 @@ namespace csharp_text_analyser_magdaopiola
 {
     class WordIterator : Iterator
     {
-        public WordIterator(FileContent fileContent)
+        public WordIterator(FileContent fileContent) : base(fileContent)
         {
             this.fileContent = fileContent;
         }
 
-        public bool HasNext()
+        public override bool HasNext()
         {
-
+            return false;
         }
-        public string MoveNext()
+        public override string MoveNext()
         {
-
+            return "";
         }
         
     }

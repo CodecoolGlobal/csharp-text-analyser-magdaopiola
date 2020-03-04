@@ -7,7 +7,7 @@ namespace csharp_text_analyser_magdaopiola
     {
         public Iterator CharIterator {get; set;}
         public Iterator WordIterator {get; set;}
-        string content;
+        public string Content {get;}
         string FileName {get;}
     
     
@@ -18,7 +18,7 @@ namespace csharp_text_analyser_magdaopiola
             {   
                 StreamReader f = File.OpenText(fileName);
                 // StreamReader -> string
-                content = f.ReadToEnd();
+                Content = f.ReadToEnd();
                 f.Close();
 
             } catch(IOException exc)
