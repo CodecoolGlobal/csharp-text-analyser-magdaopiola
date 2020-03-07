@@ -8,7 +8,7 @@ namespace csharp_text_analyser_magdaopiola
         private Dictionary<string, int> dict = new Dictionary<string, int>();
         private List<string> list = new List<string>();
         private string str;
-        private View view = new View();
+        public View view = new View();
 
         public StatisticalAnalysis(Iterator iterator)
         {
