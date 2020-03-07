@@ -17,6 +17,7 @@ namespace csharp_text_analyser_magdaopiola
                 }
             }
             textArray = tempList.ToArray();
+            
         }
 
         public override bool HasNext()

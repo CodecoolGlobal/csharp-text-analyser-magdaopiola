@@ -3,10 +3,10 @@ using System.IO;
 
 namespace csharp_text_analyser_magdaopiola
 {
-    public class FileContent
+    public class FileContent : IterableText
     {
-        public Iterator CharIterator {get; set;}
-        public Iterator WordIterator {get; set;}
+        private Iterator charIterator;
+        private Iterator wordIterator;
         public string Content {get;}
         string FileName {get;}
     
@@ -25,6 +25,20 @@ namespace csharp_text_analyser_magdaopiola
             {
                 Console.WriteLine(exc);
             }
-        }      
+        }
+
+        public Iterator CharIterator()
+        {
+            charIterator = new CharIterator(this);
+            return charIterator;
+        }
+
+        public Iterator WordIterator()
+        {
+            wordIterator = new WordIterator(this);
+            return wordIterator;
+        }
+
+
     }
 }
